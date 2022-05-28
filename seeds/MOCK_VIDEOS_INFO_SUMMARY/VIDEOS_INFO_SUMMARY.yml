@@ -1,0 +1,10 @@
+version: 2
+
+seeds:
+  - name: VIDEOS_INFO_SUMMARY_MOCK_RESULTS_MULTIPLE_VIDEOS_HAVE_ZERO_REVENUE
+    config:
+      enabled: "{{ var('test_mode', false) }}"
+
+  - name: VIDEOS_INFO_SUMMARY_MOCK_VIDEOS_INFO_MULTIPLE_VIDEOS_HAVE_ZERO_REVENUE
+    config:
+      enabled: "{{ var('test_mode', false) }}"

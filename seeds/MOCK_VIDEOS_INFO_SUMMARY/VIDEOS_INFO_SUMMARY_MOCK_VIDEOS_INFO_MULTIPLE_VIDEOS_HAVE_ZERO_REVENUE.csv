@@ -1,0 +1,5 @@
+VIDEO_ID,DATE_REV,CATEGORY,REVENUE 
+video_a,2022-02-12,advertisement,10
+video_a,2022-02-12,advertisement,0
+video_a,2022-03-12,other,15
+video_a,2022-03-12,advertisement,1

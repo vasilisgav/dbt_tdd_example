@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+    - name: MY_SCHEMA
+      database: MY_DB
+      tables:
+        - name: VIDEOS_INFO
+models:
+  - name: VIDEOS_INFO_SUMMARY
+    description: "Summary of VIDEOS_INFO"
+    tests:
+        - dbt_utils.equality:
+            tags: ['test_VIDEOS_INFO_SUMMARY_MULTIPLE_VIDEOS_HAVE_ZERO_REVENUE']
+            compare_model: ref('VIDEOS_INFO_SUMMARY_MOCK_RESULTS_MULTIPLE_VIDEOS_HAVE_ZERO_REVENUE')
+            compare_columns:
+              - VIDEO_ID
+              - YEAR
+              - MONTH
+              - REVENUE
+              - COUNTS
+            enabled: "{{ var('test_mode', false) }}"
