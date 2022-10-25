@@ -24,7 +24,7 @@ do
     if [[ "$specific_model" == "ALL" ]] || [[ "$specific_model" == "$seed" ]]; then
 
         # skip lines that start with #
-        if [[ $seed == \#* ]]; then
+        if [[ $seed =~ \#* ]]; then
             continue
         fi
 
@@ -58,7 +58,7 @@ do
         if [[ "$specific_test_case" == "ALL" ]] || [[ "$specific_test_case" == "$test_id" ]]; then
 
              #skip lines that start with #
-            if [[ $pair == \#* ]]; then
+            if [[ $pair =~ \#* ]]; then
                 continue
             fi
 
